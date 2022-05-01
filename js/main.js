@@ -27,7 +27,8 @@ function addTask() {
 }
 
 function showTasks() {
-    todoBody.innerHTML = '' ;
+    if (taskInp.value !='') {
+            todoBody.innerHTML = '' ;
     let divTask ;
   for (let i = 0; i < arrayOfTasks.length; i++) {
         if (arrayOfTasks[i].isDone) {
@@ -46,6 +47,8 @@ function showTasks() {
         `;
         }
         todoBody.innerHTML += divTask ;
+    }
+
   }
 
   let allTasks = document.querySelectorAll('.new_task p') ;
