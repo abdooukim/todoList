@@ -15,6 +15,7 @@ if (localStorage.getItem('tasks') !== null ) {
 showTasks() ;
 
 function addTask() {
+    if (taskInp.value !='') {
   let task = {
     title: taskInp.value,
     isDone: false,
@@ -25,9 +26,10 @@ function addTask() {
   taskInp.value = '' ;
   taskInp.focus() ;
 }
+}
 
 function showTasks() {
-    if (taskInp.value !='') {
+    
             todoBody.innerHTML = '' ;
     let divTask ;
   for (let i = 0; i < arrayOfTasks.length; i++) {
@@ -47,7 +49,6 @@ function showTasks() {
         `;
         }
         todoBody.innerHTML += divTask ;
-    }
 
   }
 
