@@ -1,0 +1,91 @@
+:root {
+    --main : #FFF ;
+    --second : #EEE ;
+    --color : #000 ;
+}
+
+.dark {
+    --main : rgb(56, 56, 56) ;
+    --second : #161B22 ;
+    --color : #FFF ;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--second);
+    color: var(--color);
+}
+
+.todo {
+    width: 50%;
+}
+
+.todo_head {
+    background-color: var(--main);
+}
+
+.todo_head input {
+    width: 80%;
+    border: none;
+    outline: none;
+    background: none;
+    color: var(--color);
+}
+
+.todo_body {
+    background-color: var(--main);
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.new_task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+    background-color: var(--second);
+}
+
+.new_task p {
+    margin: 0 10px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.new_task span {
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.done {
+    color: #009688;
+    text-decoration: line-through;
+    font-weight: normal;
+}
+
+.darkMode {
+    height: 20px;
+    width: 40px;
+    background-color: var(--color);
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.darkMode span {
+    display: inline-block ;
+    height: 20px;
+    width: 20px;
+    background-color: var(--main);
+    border-radius: 100px;
+    transition: 0.4s;
+}
+
+.move {
+    transform: translateX(100%);
+}
